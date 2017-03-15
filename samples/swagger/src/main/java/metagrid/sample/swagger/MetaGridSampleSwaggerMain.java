@@ -32,7 +32,7 @@ public class MetaGridSampleSwaggerMain {
                 .password("")
                 .build();
         
-        repository.put("sample", dataSource);
+        repository.registerNewDataSource("sample", dataSource);
 
         try (Connection con = dataSource.getConnection();
              Statement st = con.createStatement()) {

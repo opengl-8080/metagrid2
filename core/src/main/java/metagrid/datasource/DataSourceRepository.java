@@ -11,7 +11,10 @@ import java.util.Optional;
 public class DataSourceRepository {
     private Map<String, DataSource> dataSourceMap = new HashMap<>();
     
-    public synchronized void put(String name, DataSource dataSource) {
+    public synchronized void registerNewDataSource(String name, DataSource dataSource) {
+        if (this.dataSourceMap.containsKey(name)) {
+            throw new IllegalArgumentException("A data source '" + name + "' already exists.");
+        }
         this.dataSourceMap.put(name, dataSource);
     }
     
