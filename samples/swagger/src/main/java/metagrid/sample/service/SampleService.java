@@ -1,13 +1,15 @@
-package metagrid.service.sample;
+package metagrid.sample.service;
 
 import metagrid.datasource.DataSourceHolder;
+import metagrid.datasource.WithTransaction;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
 
-@Service
+@Component
+@WithTransaction
 public class SampleService {
     
     private DataSourceHolder holder;

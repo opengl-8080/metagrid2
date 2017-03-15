@@ -1,6 +1,7 @@
-package metagrid.web.api.sample;
+package metagrid.sample.web.api;
 
-import metagrid.service.sample.SampleService;
+import metagrid.sample.service.SampleService;
+import metagrid.web.WithDataSource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,8 @@ public class SampleController {
         this.service = service;
     }
 
-    @GetMapping(headers = "DataSourceName=sample")
+    @WithDataSource
+    @GetMapping(params = "dataSourceName")
     public String hello() {
         this.service.test();
         return "hello";
