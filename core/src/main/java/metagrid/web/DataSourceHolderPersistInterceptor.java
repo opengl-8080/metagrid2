@@ -35,7 +35,7 @@ public class DataSourceHolderPersistInterceptor {
         }
         
         DataSource dataSource = this.repository.get(dataSourceName)
-                                    .orElseThrow(() -> new BadRequestException("A data source '" + dataSourceName + "' is not exists."));
+                                    .orElseThrow(() -> new BadRequestException("A data source '" + dataSourceName + "' does not exist."));
         this.holder.set(dataSource);
         log.debug("Persist data source '{}'.", dataSourceName);
     }
