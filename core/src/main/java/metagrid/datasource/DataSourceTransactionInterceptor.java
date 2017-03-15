@@ -1,14 +1,10 @@
 package metagrid.datasource;
 
-import lombok.extern.slf4j.Slf4j;
-import metagrid.MetaGridException;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-@Slf4j
 @Aspect
 @Component
 public class DataSourceTransactionInterceptor {
@@ -19,19 +15,16 @@ public class DataSourceTransactionInterceptor {
         this.dataSourceHolder = dataSourceHolder;
     }
 
-    @Around("@within(service)")
-    public Object aroundTransaction(ProceedingJoinPoint jp, Service service) throws Throwable {
+    @Around("@within(withTransaction)")
+    public Object transaction(ProceedingJoinPoint jp, WithTransaction withTransaction) throws Throwable {
+        Transaction tx = new Transaction(this.dataSourceHolder.get());
         try {
-            log.debug("TransactionInterceptor intercepts method invocation.");
-            this.dataSourceHolder.beginTransaction();
+            tx.begin();
             Object result = jp.proceed();
-            this.dataSourceHolder.commit();
+            tx.commit();
             return result;
-        } catch (Exception e) {
-            throw new MetaGridException(e);
         } finally {
-            this.dataSourceHolder.rollback();
-            log.debug("TransactionInterceptor finishes the intercepting.");
+            tx.rollback();
         }
     }
 }

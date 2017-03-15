@@ -1,11 +1,11 @@
-package metagrid.datasource;
+package metagrid.web;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.TYPE)
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface WithTransaction {
+public @interface WithDataSource {
 }

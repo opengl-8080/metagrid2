@@ -1,11 +1,11 @@
 package metagrid.datasource;
 
-import metagrid.MetaGridException;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 @Component
 public class DataSourceRepository {
@@ -15,11 +15,11 @@ public class DataSourceRepository {
         this.dataSourceMap.put(name, dataSource);
     }
     
-    synchronized DataSource get(String name) {
+    public synchronized Optional<DataSource> get(String name) {
         if (!this.dataSourceMap.containsKey(name)) {
-            throw new MetaGridException("DataSource '%s' is not found.", name);
+            return Optional.empty();
         }
 
-        return this.dataSourceMap.get(name);
+        return Optional.of(this.dataSourceMap.get(name));
     }
 }
