@@ -1,0 +1,8 @@
+dependencies {
+    provided 'org.projectlombok:lombok:1.16.14'
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-jdbc"
+    compile "org.springframework.boot:spring-boot-starter-aop"
+}
+
+jar.baseName = 'metagrid-core'

@@ -2,6 +2,7 @@ dependencies {
     compile project(':core')
     compile 'io.springfox:springfox-swagger2:2.6.1'
     compile 'io.springfox:springfox-swagger-ui:2.6.1'
+    compile 'org.hsqldb:hsqldb:2.3.4'
 }
 
 jar.baseName = 'metagrid-swagger'
