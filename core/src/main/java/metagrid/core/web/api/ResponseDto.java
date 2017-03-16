@@ -1,4 +1,4 @@
-package metagrid.web.api;
+package metagrid.core.web.api;
 
 import lombok.Builder;
 import lombok.Data;

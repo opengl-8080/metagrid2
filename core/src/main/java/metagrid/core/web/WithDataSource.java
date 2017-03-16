@@ -1,4 +1,4 @@
-package metagrid.web;
+package metagrid.core.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 

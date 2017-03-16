@@ -1,7 +1,7 @@
 package metagrid.sample.web.api;
 
 import metagrid.sample.service.SampleService;
-import metagrid.web.WithDataSource;
+import metagrid.core.web.WithDataSource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

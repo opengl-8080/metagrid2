@@ -1,4 +1,4 @@
-package metagrid.datasource;
+package metagrid.core.datasource;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Scope;

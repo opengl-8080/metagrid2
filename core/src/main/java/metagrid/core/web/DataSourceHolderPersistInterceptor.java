@@ -1,8 +1,8 @@
-package metagrid.web;
+package metagrid.core.web;
 
 import lombok.extern.slf4j.Slf4j;
-import metagrid.datasource.DataSourceHolder;
-import metagrid.datasource.DataSourceRepository;
+import metagrid.core.datasource.DataSourceHolder;
+import metagrid.core.datasource.DataSourceRepository;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;

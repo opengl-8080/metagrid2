@@ -1,4 +1,4 @@
-package metagrid.web;
+package metagrid.core.web;
 
 public class BadRequestException extends RuntimeException {
     public BadRequestException(String message) {

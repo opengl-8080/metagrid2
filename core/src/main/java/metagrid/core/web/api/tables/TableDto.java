@@ -1,9 +1,9 @@
-package metagrid.web.api.tables;
+package metagrid.core.web.api.tables;
 
 import lombok.Builder;
 import lombok.Data;
-import metagrid.domain.definition.TableDefinition;
-import metagrid.domain.definition.bean.TableDefinitionBean;
+import metagrid.core.domain.definition.TableDefinition;
+import metagrid.core.domain.definition.bean.TableDefinitionBean;
 
 @Data
 @Builder

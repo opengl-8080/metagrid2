@@ -1,21 +1,21 @@
-package metagrid.domain.definition;
+package metagrid.core.domain.definition;
 
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.springframework.util.StringUtils;
 
-@EqualsAndHashCode
 @ToString
-public class TableName {
+@EqualsAndHashCode
+public class LogicalTableName {
     private final String value;
     
-    public static TableName of(String value) {
-        return new TableName(value);
+    public static LogicalTableName of(String value) {
+        return new LogicalTableName(value);
     }
 
-    private TableName(String value) {
+    private LogicalTableName(String value) {
         if (StringUtils.isEmpty(value)) {
-            throw new IllegalArgumentException("table name is required.");
+            throw new IllegalArgumentException("logical table name is required.");
         }
         this.value = value;
     }

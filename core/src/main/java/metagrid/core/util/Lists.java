@@ -1,4 +1,4 @@
-package metagrid.util;
+package metagrid.core.util;
 
 import org.springframework.util.CollectionUtils;
 

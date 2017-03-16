@@ -1,7 +1,7 @@
 package metagrid.sample.swagger;
 
-import metagrid.MetaGridCoreConfiguration;
-import metagrid.datasource.DataSourceRepository;
+import metagrid.core.MetaGridCoreConfiguration;
+import metagrid.core.datasource.DataSourceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

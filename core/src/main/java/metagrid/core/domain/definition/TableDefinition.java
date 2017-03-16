@@ -1,7 +1,7 @@
-package metagrid.domain.definition;
+package metagrid.core.domain.definition;
 
 import lombok.ToString;
-import metagrid.domain.definition.bean.TableDefinitionBean;
+import metagrid.core.domain.definition.bean.TableDefinitionBean;
 
 import java.util.Objects;
 

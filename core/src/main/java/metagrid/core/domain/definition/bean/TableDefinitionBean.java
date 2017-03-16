@@ -1,4 +1,4 @@
-package metagrid.domain.definition.bean;
+package metagrid.core.domain.definition.bean;
 
 import lombok.Builder;
 import lombok.Value;

@@ -1,4 +1,4 @@
-package metagrid.datasource;
+package metagrid.core.datasource;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

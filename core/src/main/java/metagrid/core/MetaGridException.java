@@ -1,4 +1,4 @@
-package metagrid;
+package metagrid.core;
 
 public class MetaGridException extends RuntimeException {
     

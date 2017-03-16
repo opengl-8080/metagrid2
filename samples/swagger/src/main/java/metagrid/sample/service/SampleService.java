@@ -1,7 +1,7 @@
 package metagrid.sample.service;
 
-import metagrid.datasource.DataSourceHolder;
-import metagrid.datasource.WithTransaction;
+import metagrid.core.datasource.DataSourceHolder;
+import metagrid.core.datasource.WithTransaction;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 

@@ -1,10 +1,10 @@
-package metagrid.web.api.tables;
+package metagrid.core.web.api.tables;
 
-import metagrid.domain.definition.TableDefinition;
-import metagrid.service.tables.TablesService;
-import metagrid.util.Lists;
-import metagrid.web.WithDataSource;
-import metagrid.web.api.ResponseDto;
+import metagrid.core.domain.definition.TableDefinition;
+import metagrid.core.service.tables.TablesService;
+import metagrid.core.util.Lists;
+import metagrid.core.web.WithDataSource;
+import metagrid.core.web.api.ResponseDto;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

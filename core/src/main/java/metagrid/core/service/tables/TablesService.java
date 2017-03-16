@@ -1,9 +1,9 @@
-package metagrid.service.tables;
+package metagrid.core.service.tables;
 
-import metagrid.datasource.DataSourceHolder;
-import metagrid.datasource.WithTransaction;
-import metagrid.domain.definition.TableDefinition;
-import metagrid.domain.definition.TableName;
+import metagrid.core.datasource.DataSourceHolder;
+import metagrid.core.datasource.WithTransaction;
+import metagrid.core.domain.definition.TableDefinition;
+import metagrid.core.domain.definition.TableName;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 

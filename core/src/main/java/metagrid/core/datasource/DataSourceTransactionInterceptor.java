@@ -1,4 +1,4 @@
-package metagrid.datasource;
+package metagrid.core.datasource;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
