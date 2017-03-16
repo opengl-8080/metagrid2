@@ -40,6 +40,15 @@ public class MetaGridSampleSwaggerMain {
             st.executeUpdate("CREATE TABLE TEST_TABLE (ID INTEGER, VALUE VARCHAR(10))");
             st.executeUpdate("INSERT INTO TEST_TABLE VALUES (1, 'HOGE')");
             st.executeUpdate("INSERT INTO TEST_TABLE VALUES (2, 'FUGA')");
+            st.executeUpdate("CREATE TABLE HOGE_TABLE (ID INTEGER, VALUE VARCHAR(10))");
+            st.executeUpdate("INSERT INTO HOGE_TABLE VALUES (1, 'HOGE')");
+            st.executeUpdate("INSERT INTO HOGE_TABLE VALUES (2, 'FUGA')");
+            st.executeUpdate("CREATE TABLE FUGA_TABLE (ID INTEGER, VALUE VARCHAR(10))");
+            st.executeUpdate("INSERT INTO FUGA_TABLE VALUES (1, 'HOGE')");
+            st.executeUpdate("INSERT INTO FUGA_TABLE VALUES (2, 'FUGA')");
+            st.executeUpdate("CREATE TABLE PIYO_TABLE (ID INTEGER, VALUE VARCHAR(10))");
+            st.executeUpdate("INSERT INTO PIYO_TABLE VALUES (1, 'HOGE')");
+            st.executeUpdate("INSERT INTO PIYO_TABLE VALUES (2, 'FUGA')");
             con.commit();
         } catch (SQLException e) {
             throw new RuntimeException(e);
