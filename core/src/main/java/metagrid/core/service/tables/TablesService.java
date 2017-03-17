@@ -24,8 +24,11 @@ public class TablesService {
     public List<TableDefinition> searchTableDefinitionList() {
         JdbcTemplate jdbc = this.holder.getJdbcTemplate();
         List<String> tableNames = jdbc.queryForList(
-                "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES ORDER BY TABLE_NAME ASC", String.class);
-        
+                "SELECT TABLE_NAME " +
+                      "FROM INFORMATION_SCHEMA.TABLES " +
+                     "WHERE TABLE_SCHEMA='PUBLIC' " + 
+                  "ORDER BY TABLE_NAME ASC", String.class);
+
         return tableNames.stream()
                 .map(TableName::of)
                 .map(TableDefinition::new)

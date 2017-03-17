@@ -3,6 +3,8 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-jdbc"
     compile "org.springframework.boot:spring-boot-starter-aop"
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+    testCompile 'org.hsqldb:hsqldb:2.3.4'
 }
 
 jar.baseName = 'metagrid-core'
